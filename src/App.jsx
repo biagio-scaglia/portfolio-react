@@ -1,14 +1,16 @@
 import React from 'react'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Explore from './pages/Explore'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Benvenuto nel mio Portfolio</h1>
-        <p>Questa è la pagina index del progetto React</p>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/esplora" element={<Explore />} />
+      </Routes>
+    </Router>
   )
 }
 
